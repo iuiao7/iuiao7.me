@@ -1,5 +1,5 @@
 import antfu from '@antfu/eslint-config'
-import withNuxt from '.nuxt/eslint.config.mjs'
+import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
   antfu({
@@ -7,6 +7,7 @@ export default withNuxt(
     unocss: true,
     formatters: {
       css: true,
+      html: true,
       markdown: 'prettier',
     },
     typescript: true,

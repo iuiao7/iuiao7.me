@@ -12,5 +12,6 @@
       </div>
     </div>
     <slot v-else />
+    <LayoutFooter />
   </div>
 </template>

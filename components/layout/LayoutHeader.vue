@@ -13,7 +13,7 @@
       <div class="flex flex-1 justify-end gap-2">
         <div class="flex">
           <NuxtLink
-            v-for="(link, i) in links"
+            v-for="(link, i) in appConfig.header.links"
             :key="i"
             :to="link?.to"
             :target="link?.target"
@@ -29,9 +29,5 @@
 </template>
 
 <script setup lang="ts">
-const links = [{
-  icon: 'lucide:github',
-  to: 'https://github.com/iuiao7/iuiao7.me',
-  target: '_blank',
-}]
+const appConfig = useAppConfig()
 </script>

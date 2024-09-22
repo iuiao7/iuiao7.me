@@ -6,6 +6,11 @@ import { presetShadcn } from 'unocss-preset-shadcn'
 export default defineConfig({
   // ...UnoCSS options
   presets: [presetUno(), presetIcons(), presetAnimations(), presetShadcn()],
+  shortcuts: [
+    {
+      'flex-center': 'flex justify-center items-center',
+    },
+  ],
   theme: {
     container: {
       center: true,
