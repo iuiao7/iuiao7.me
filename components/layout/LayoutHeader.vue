@@ -18,9 +18,9 @@
             :to="link?.to"
             :target="link?.target"
           >
-            <UiButton variant="ghost" size="icon" class="flex gap-2">
+            <UButton variant="ghost" class="flex gap-2">
               <SmartIcon v-if="link?.icon" :name="link.icon" :size="18" />
-            </UiButton>
+            </UButton>
           </NuxtLink>
         </div>
       </div>

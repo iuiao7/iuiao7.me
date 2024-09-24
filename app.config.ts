@@ -1,4 +1,8 @@
 export default defineAppConfig({
+  ui: {
+    primary: 'sky',
+    gray: 'zinc',
+  },
   header: {
     links: [{
       icon: 'lucide:github',
