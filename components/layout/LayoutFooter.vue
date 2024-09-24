@@ -1,6 +1,6 @@
 <template>
-  <footer class="py-6 text-muted-foreground md:px-8 md:py-0">
-    <div class="flex-center gap-2 container md:h-24">
+  <footer class="text-muted-foreground py-6 md:px-8 md:py-0">
+    <div class="flex-center container gap-2 md:h-24">
       <span class="text-sm">
         {{ appConfig.footer.credits }}
       </span>

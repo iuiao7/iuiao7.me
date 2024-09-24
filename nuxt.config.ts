@@ -10,7 +10,13 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/content', '@nuxt/ui'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/content',
+    '@nuxt/ui',
+    '@nuxtjs/google-fonts',
+  ],
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -37,5 +43,12 @@ export default defineNuxtConfig({
 
   content: {
 
+  },
+
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Inter: [400, 500, 600, 700, 800, 900],
+    },
   },
 })
