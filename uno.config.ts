@@ -15,6 +15,10 @@ export default defineConfig({
     container: {
       center: true,
     },
+    fontFamily: {
+      inter: 'Inter',
+      jetbrains: 'JetBrains Mono',
+    },
   },
   content: {
     pipeline: {
