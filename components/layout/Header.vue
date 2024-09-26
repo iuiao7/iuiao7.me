@@ -7,23 +7,10 @@
     >
       <div class="flex flex-1">
         <span class="ml-3 self-center font-bold">
-          Gargen
+          {{ appConfig.header.title }}
         </span>
       </div>
-      <div class="flex flex-1 justify-end gap-2">
-        <div class="flex">
-          <NuxtLink
-            v-for="(link, i) in appConfig.header.links"
-            :key="i"
-            :to="link?.to"
-            :target="link?.target"
-          >
-            <UiButton variant="ghost" size="icon" class="flex gap-2">
-              <SmartIcon v-if="link?.icon" :name="link.icon" :size="18" />
-            </UiButton>
-          </NuxtLink>
-        </div>
-      </div>
+      <div class="flex flex-1 justify-end gap-2" />
     </div>
   </header>
 </template>
