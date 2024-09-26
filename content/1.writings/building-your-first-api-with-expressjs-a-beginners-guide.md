@@ -1,8 +1,8 @@
 ---
-title: "Building Your First API with Express.js: A Beginner's Guide"
-description: "A beginner-friendly guide to building your first API with Express.js"
+title: 'Building Your First API with Express.js: A Beginner''s Guide'
+description: A beginner-friendly guide to building your first API with Express.js
 published: 2023/11/2
-slug: "building-your-first-api-with-expressjs-a-beginners-guide"
+slug: building-your-first-api-with-expressjs-a-beginners-guide
 ---
 
 > This article was created using ChatGPT and meant as a placeholder
@@ -79,7 +79,7 @@ app.get('/users', (req, res) => {
 })
 ```
 
-Now, if you visit http://localhost:3000/users, you will see the JSON representation of the users array.
+Now, if you visit <http://localhost:3000/users>, you will see the JSON representation of the users array.
 
 ## Step 6: Testing Your API
 

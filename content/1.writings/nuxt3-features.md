@@ -1,8 +1,12 @@
 ---
-title: "Nuxt 3: 下一代Vue全栈框架"
-description: "探索Nuxt 3的新特性和改进,了解它如何革新Vue全栈开发"
-date: "2024-03-19"
-tags: ["Nuxt", "Vue", "全栈开发", "JavaScript"]
+title: 'Nuxt 3: 下一代Vue全栈框架'
+description: 探索Nuxt 3的新特性和改进,了解它如何革新Vue全栈开发
+date: '2024-03-19'
+tags:
+  - Nuxt
+  - Vue
+  - 全栈开发
+  - JavaScript
 ---
 
 # Nuxt 3: 下一代Vue全栈框架

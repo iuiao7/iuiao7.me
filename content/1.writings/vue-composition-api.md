@@ -1,8 +1,12 @@
 ---
-title: "深入理解Vue 3 Composition API"
-description: "探索Vue 3 Composition API的强大功能和使用方法"
-date: "2024-03-18"
-tags: ["Vue", "JavaScript", "前端开发", "Composition API"]
+title: 深入理解Vue 3 Composition API
+description: 探索Vue 3 Composition API的强大功能和使用方法
+date: '2024-03-18'
+tags:
+  - Vue
+  - JavaScript
+  - 前端开发
+  - Composition API
 ---
 
 # 深入理解Vue 3 Composition API
@@ -17,7 +21,7 @@ Composition API是Vue 3引入的一个新的API集合,旨在解决Vue 2中Option
 
 在大型复杂的应用中,Options API可能会导致组件变得难以理解和维护。相关的逻辑可能分散在不同的选项中,使得代码难以追踪和重构。Composition API通过允许我们按照逻辑关系组织代码,解决了这个问题。
 
-## setup函数:Composition API的入口
+## setup函数\:Composition API的入口
 
 `setup`函数是Composition API的核心。它在组件创建之前执行,作为组合逻辑的入口点。在`setup`中,我们可以定义响应式状态、计算属性、方法等,并将它们返回以供模板使用。
 
@@ -51,7 +55,7 @@ onMounted(() => {
 </script>
 ```
 
-## 响应式系统的核心:ref和reactive
+## 响应式系统的核心\:ref和reactive
 
 Composition API引入了两个主要的响应式API:`ref`和`reactive`。
 
