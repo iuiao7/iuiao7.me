@@ -1,4 +1,4 @@
-// uno.config.ts
+import { theme as defaultTheme } from '@unocss/preset-wind'
 import { defineConfig, presetIcons, presetUno } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
 import { presetShadcn } from 'unocss-preset-shadcn'
@@ -17,7 +17,9 @@ export default defineConfig({
       center: true,
     },
     fontFamily: {
-      inter: 'Inter',
+      mono: `'Source Code Pro', ${defaultTheme.fontFamily!.mono}`,
+      sans: `'Source Sans 3', ${defaultTheme.fontFamily!.sans}`,
+      serif: `'Source Serif 4', ${defaultTheme.fontFamily!.serif}`,
     },
   },
   content: {

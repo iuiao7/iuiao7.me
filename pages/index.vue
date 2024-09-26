@@ -1,7 +1,7 @@
 <template>
   <div>
-    <pre class="font-inter">{{ JSON.stringify(routes, null, 2) }}</pre>
-    <pre class="font-inter">{{ navigation }}</pre>
+    <pre class="font-mono">{{ JSON.stringify(routes, null, 2) }}</pre>
+    <pre class="font-mono">{{ navigation }}</pre>
   </div>
 </template>
 

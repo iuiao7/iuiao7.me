@@ -1,13 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+    componentInspector: false,
+  },
 
   css: ['@unocss/reset/tailwind.css', 'assets/css/base.css'],
 
   experimental: {
     viewTransition: true,
     typedPages: true,
+  },
+
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   modules: [
