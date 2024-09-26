@@ -10,7 +10,9 @@
           {{ appConfig.header.title }}
         </span>
       </div>
-      <div class="flex flex-1 justify-end gap-2" />
+      <div class="flex gap-2">
+        <LayoutDarkModeToggle />
+      </div>
     </div>
   </header>
 </template>

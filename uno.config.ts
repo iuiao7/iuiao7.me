@@ -18,7 +18,6 @@ export default defineConfig({
     },
     fontFamily: {
       inter: 'Inter',
-      jetbrains: 'JetBrains Mono',
     },
   },
   content: {
