@@ -1,0 +1,18 @@
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  --at-apply: antialiased font-sans;
+}
+
+code,
+kbd,
+samp,
+pre {
+  --at-apply: font-mono;
+}

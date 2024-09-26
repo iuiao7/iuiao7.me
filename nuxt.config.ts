@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     componentInspector: false,
   },
 
-  css: ['@unocss/reset/tailwind.css', 'assets/css/base.css'],
+  css: ['@unocss/reset/tailwind.css', 'assets/css/main.css'],
 
   experimental: {
     viewTransition: true,

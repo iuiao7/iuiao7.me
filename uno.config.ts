@@ -1,5 +1,5 @@
 import { theme as defaultTheme } from '@unocss/preset-wind'
-import { defineConfig, presetIcons, presetUno } from 'unocss'
+import { defineConfig, presetIcons, presetUno, transformerDirectives } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
 import { presetShadcn } from 'unocss-preset-shadcn'
 
@@ -32,4 +32,7 @@ export default defineConfig({
       ],
     },
   },
+  transformers: [
+    transformerDirectives(),
+  ],
 })
