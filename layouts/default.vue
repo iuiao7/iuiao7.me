@@ -1,10 +1,8 @@
 <template>
   <div>
     <LayoutHeader />
-    <div class="min-h-screen border-b">
-      <div class="px-8 font-inter container">
-        <slot />
-      </div>
+    <div class="min-h-screen border-b container">
+      <slot />
     </div>
     <LayoutFooter />
   </div>

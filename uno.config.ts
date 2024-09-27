@@ -1,11 +1,11 @@
 import { theme as defaultTheme } from '@unocss/preset-wind'
-import { defineConfig, presetIcons, presetUno, transformerDirectives } from 'unocss'
+import { defineConfig, presetIcons, presetTypography, presetUno, transformerDirectives } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
 import { presetShadcn } from 'unocss-preset-shadcn'
 
 export default defineConfig({
   // ...UnoCSS options
-  presets: [presetUno(), presetIcons(), presetAnimations(), presetShadcn()],
+  presets: [presetUno(), presetIcons(), presetTypography(), presetAnimations(), presetShadcn()],
   shortcuts: [
     {
       'flex-center': 'flex justify-center items-center',
@@ -33,7 +33,5 @@ export default defineConfig({
       ],
     },
   },
-  transformers: [
-    transformerDirectives(),
-  ],
+  transformers: [transformerDirectives()],
 })
