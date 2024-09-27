@@ -1,7 +1,7 @@
 ---
 title: 现代CSS技术:构建响应式和高效的Web设计
 description: 探索最新的CSS技术和方法,提升你的Web设计和开发技能
-date: '2024-03-20'
+published: 2024/03/20
 tags:
   - CSS
   - Web设计

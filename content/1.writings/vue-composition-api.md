@@ -1,7 +1,7 @@
 ---
 title: 深入理解Vue 3 Composition API
 description: 探索Vue 3 Composition API的强大功能和使用方法
-date: '2024-03-18'
+published: 2024/03/18
 tags:
   - Vue
   - JavaScript

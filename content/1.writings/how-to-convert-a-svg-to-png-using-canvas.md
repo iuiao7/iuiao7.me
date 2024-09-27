@@ -1,8 +1,7 @@
 ---
 title: How to convert a SVG to PNG using Canvas
 description: A simple way to convert a SVG to PNG using Canvas
-published: 2023/11/22
-slug: how-to-convert-a-svg-to-png-using-canvas
+published: 2024/03/21
 ---
 
 > This article was created using ChatGPT and meant as a placeholder
