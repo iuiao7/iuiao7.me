@@ -45,7 +45,7 @@ const pngUrl = canvas.toDataURL('image/png')
 This pngUrl is a base64 encoded string representing your PNG image.
 
 5. Use or Save the PNG Image
-   Now that you have your PNG in base64 format, you can use it as needed in your application. For example, you can display it in an ![undefined](undefined) element or download it:
+   Now that you have your PNG in base64 format, you can use it as needed in your application. For example, you can display it in an element or download it:
 
 ```js
 const imgElement = document.createElement('img')
