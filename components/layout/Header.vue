@@ -7,7 +7,7 @@
     >
       <div class="flex flex-1">
         <span class="ml-3 self-center font-bold">
-          {{ appConfig.header.title }}
+          Shawn's blog
         </span>
       </div>
       <div class="flex gap-2">
@@ -16,7 +16,3 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-const appConfig = useAppConfig()
-</script>

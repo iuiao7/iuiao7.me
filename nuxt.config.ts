@@ -21,8 +21,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxt/eslint',
     'shadcn-nuxt',
-    '@nuxt/icon',
-    '@nuxt/image',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
@@ -48,10 +46,5 @@ export default defineNuxtConfig({
 
   content: {
 
-  },
-
-  icon: {
-    provider: 'iconify',
-    serverBundle: false,
   },
 })

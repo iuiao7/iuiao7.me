@@ -29,6 +29,7 @@ export default defineConfig({
         /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
         // include js/ts files
         'components/**/*.{js,ts}',
+        'app.config.ts',
       ],
     },
   },
