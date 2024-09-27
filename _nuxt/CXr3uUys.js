@@ -1,0 +1,1 @@
+import{a2 as n,a3 as o,u as t,a4 as p}from"./enoWsfzu.js";const a=n({footer:{links:[{icon:"i-lucide-github",to:"https://github.com/iuiao7/iuiao7.me",target:"_blank"}]}}),u={nuxt:{}},e=o(a,u);function s(){const i=t();return i._appConfig||(i._appConfig=p(e)),i._appConfig}export{s as u};
