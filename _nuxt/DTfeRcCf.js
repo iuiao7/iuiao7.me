@@ -1,0 +1,1 @@
+import{aa as n,ab as o,u as t,ac as p}from"./CQQmSQBT.js";const a=n({footer:{links:[{icon:"i-lucide-github",to:"https://github.com/iuiao7/iuiao7.me",target:"_blank"}]}}),u={nuxt:{}},e=o(a,u);function s(){const i=t();return i._appConfig||(i._appConfig=p(e)),i._appConfig}export{s as u};
