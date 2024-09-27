@@ -17,8 +17,8 @@ export default defineConfig({
       center: true,
     },
     fontFamily: {
-      mono: `'Source Code Pro', ${defaultTheme.fontFamily!.mono}`,
-      sans: `'Source Sans 3', ${defaultTheme.fontFamily!.sans}`,
+      mono: `'Cascadia Code', ${defaultTheme.fontFamily!.mono}`,
+      sans: `'Hanken Grotesk', ${defaultTheme.fontFamily!.sans}`,
       serif: `'Source Serif 4', ${defaultTheme.fontFamily!.serif}`,
     },
   },
