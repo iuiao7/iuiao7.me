@@ -3,7 +3,7 @@
     <UiTooltip>
       <UiTooltipTrigger as-child>
         <UiButton variant="ghost" size="icon" @click="isDark = !isDark">
-          <Icon aria-hidden="true" :name="isDark ? 'radix-icons:sun' : 'radix-icons:moon'" class="h-5 w-5" />
+          <Icon aria-hidden="true" :name="isDark ? 'i-radix-icons-sun' : 'i-radix-icons-moon'" class="h-5 w-5" />
           <span class="sr-only">Switch dark mode</span>
         </UiButton>
       </UiTooltipTrigger>

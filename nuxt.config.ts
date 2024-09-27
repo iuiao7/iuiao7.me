@@ -51,4 +51,8 @@ export default defineNuxtConfig({
   content: {
 
   },
+
+  icon: {
+    serverBundle: 'remote',
+  },
 })

@@ -5,7 +5,7 @@ export default defineAppConfig({
   footer: {
     credits: '© 2024 Shawn Liu. All rights reserved.',
     links: [{
-      icon: 'lucide:github',
+      icon: 'i-lucide-github',
       to: 'https://github.com/iuiao7/iuiao7.me',
       target: '_blank',
     }],
