@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     componentInspector: false,
   },
 
-  css: ['@unocss/reset/tailwind.css', 'assets/css/main.css'],
+  css: ['assets/css/main.css'],
 
   experimental: {
     viewTransition: true,
@@ -18,12 +18,13 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@unocss/nuxt',
+    '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     'shadcn-nuxt',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
+    '@nuxt/icon',
   ],
 
   colorMode: {
@@ -42,6 +43,7 @@ export default defineNuxtConfig({
 
   shadcn: {
     prefix: 'ui',
+    componentDir: './components/ui',
   },
 
   content: {
