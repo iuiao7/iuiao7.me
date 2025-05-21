@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {
@@ -6,7 +8,11 @@ export default defineNuxtConfig({
     componentInspector: false,
   },
 
-  css: ['assets/css/main.css'],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  css: ['~/assets/css/tailwind.css'],
 
   experimental: {
     viewTransition: true,
@@ -18,13 +24,12 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
-    'shadcn-nuxt',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
+    'shadcn-nuxt',
   ],
 
   colorMode: {
@@ -46,7 +51,5 @@ export default defineNuxtConfig({
     componentDir: './components/ui',
   },
 
-  content: {
-
-  },
+  content: {},
 })

@@ -32,9 +32,7 @@ Composition API是Vue 3引入的一个新的API集合,旨在解决Vue 2中Option
   <div>
     <p>Count: {{ count }}</p>
     <p>Double Count: {{ doubleCount }}</p>
-    <button @click="increment">
-      Increment
-    </button>
+    <button @click="increment">Increment</button>
   </div>
 </template>
 

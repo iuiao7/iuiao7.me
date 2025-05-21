@@ -1,9 +1,4 @@
-import {
-  addComponent,
-  addComponentsDir,
-  defineNuxtModule,
-  tryResolveModule,
-} from 'nuxt/kit'
+import { addComponent, addComponentsDir, defineNuxtModule, tryResolveModule } from 'nuxt/kit'
 
 export interface ShadcnVueOptions {
   /**
@@ -45,7 +40,7 @@ export default defineNuxtModule<ShadcnVueOptions>({
       },
       {
         prepend: true,
-      },
+      }
     )
 
     if (veeValidate !== undefined) {
@@ -65,7 +60,7 @@ export default defineNuxtModule<ShadcnVueOptions>({
     }
 
     if (vaulVue !== undefined) {
-      ['DrawerPortal', 'DrawerTrigger', 'DrawerClose'].forEach((item) => {
+      ;['DrawerPortal', 'DrawerTrigger', 'DrawerClose'].forEach((item) => {
         addComponent({
           filePath: 'vaul-vue',
           export: item,

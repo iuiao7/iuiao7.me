@@ -1,7 +1,7 @@
 <template>
   <div>
     <LayoutHeader />
-    <div class="min-h-screen border-b container">
+    <div class="container min-h-screen border-b">
       <slot />
     </div>
     <LayoutFooter />

@@ -2,7 +2,7 @@
   <main>
     <ContentDoc>
       <template #default="{ doc }">
-        <article class="mx-auto text-base prose prose-truegray xl:text-xl dark:prose-invert">
+        <article class="prose prose-truegray dark:prose-invert mx-auto text-base xl:text-xl">
           <h1>{{ doc.title }}</h1>
           <ContentRenderer :value="doc" />
         </article>
