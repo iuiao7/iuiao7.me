@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 
 const postsDir = path.join(process.cwd(), 'content/1.writings')
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(() => {
   const fileNames = fs.readdirSync(postsDir)
   const posts = fileNames.map((fileName) => {
     const id = fileName.replace(/.md$/, '')
