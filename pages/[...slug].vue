@@ -1,5 +1,3 @@
 <template>
-  <main>
-    404
-  </main>
+  <main>404</main>
 </template>

@@ -26,10 +26,10 @@ Set the width and height of the canvas to match the desired dimensions of your f
 
 ```js
 const img = new Image()
-img.onload = function () {
+img.addEventListener('load', function () {
   const ctx = canvas.getContext('2d')
   ctx.drawImage(img, 0, 0)
-}
+})
 img.src = `data:image/svg+xml;base64,${btoa(svgString)}`
 ```
 
@@ -50,7 +50,7 @@ This pngUrl is a base64 encoded string representing your PNG image.
 ```js
 const imgElement = document.createElement('img')
 imgElement.src = pngUrl
-document.body.appendChild(imgElement)
+document.body.append(imgElement)
 
 // To download the image
 const downloadLink = document.createElement('a')

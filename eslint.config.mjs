@@ -1,21 +1,27 @@
-import antfu from '@antfu/eslint-config'
+import { sxzz } from '@sxzz/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
-  antfu({
-    lessOpinionated: true,
-    formatters: {
-      css: true,
-      html: true,
-      markdown: 'prettier',
+  sxzz(
+    {
+      prettier: true,
+      markdown: true,
+      vue: true,
+      unocss: false,
     },
-    typescript: true,
-    vue: true,
-  }, {
-    rules: {
-      'vue/block-order': ['error', {
-        order: ['template', 'script', 'style'],
-      }],
-    },
-  }),
+    [
+      {
+        files: ['**/*.ts', '**/*.vue'],
+        rules: {
+          'vue/block-order': [
+            'error',
+            {
+              order: ['template', 'script', 'style'],
+            },
+          ],
+          'no-duplicate-imports': 'off',
+        },
+      },
+    ]
+  )
 )

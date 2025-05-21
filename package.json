@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@nuxt/content": "^2.13.2",
@@ -27,15 +28,16 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.1",
     "@iconify-json/lucide": "^1.2.6",
     "@nuxt/devtools": "2.4.1",
     "@nuxt/eslint": "^1.4.0",
     "@nuxt/icon": "^1.10.2",
+    "@sxzz/eslint-config": "^7.0.1",
     "@tailwindcss/typography": "^0.5.16",
     "eslint": "^9.26.0",
-    "eslint-plugin-format": "1.0.1",
     "lint-staged": "16.0.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.8.3"
   },
@@ -43,6 +45,12 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*.{ts,vue,mjs,mts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "(*.md|*.json)": [
+      "prettier --write"
+    ]
   }
 }

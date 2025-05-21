@@ -4,7 +4,7 @@
       v-for="(link, i) in navigation"
       :key="i"
       :to="link._path"
-      class="text-sm text-muted-foreground font-medium transition-colors hover:text-primary"
+      class="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
     >
       {{ link.title }}
     </NuxtLink>
