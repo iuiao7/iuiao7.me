@@ -16,7 +16,7 @@ export default defineEventHandler(() => {
 
     return {
       id,
-      title: matterInfo.data.title,
+      title: (matterInfo.data?.title as string) ?? '',
       date: fileInfo.ctime,
     }
   })
