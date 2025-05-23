@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>{{ data.title }}</h1>
-    <div v-html="data.content" />
+    <h1 class="mb-4 text-2xl font-bold">{{ data.title }}</h1>
+    <article
+      class="prose prose-truegray dark:prose-invert mx-auto text-base xl:text-xl"
+      v-html="data.content"
+    />
   </div>
 </template>
 
