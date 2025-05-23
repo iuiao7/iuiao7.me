@@ -5,7 +5,11 @@ import matter from 'gray-matter'
 
 const postsDir = path.join(process.cwd(), 'content/1.writings')
 
-export default defineEventHandler(() => {
+export default defineEventHandler((event) => {
+  const query = getQuery(event)
+  const page = Number(query.page) || 1
+  const size = Number(query.size) || 10
+
   const fileNames = fs.readdirSync(postsDir)
   const posts = fileNames.map((fileName) => {
     const id = fileName.replace(/.md$/, '')
@@ -21,6 +25,13 @@ export default defineEventHandler(() => {
     }
   })
 
+  const start = (page - 1) * size
+  const end = start + size
+  // 按时间降序排序
   posts.sort((a, b) => b.date.getTime() - a.date.getTime())
-  return posts
+
+  return {
+    records: posts.slice(start, end),
+    total: posts.length,
+  }
 })
