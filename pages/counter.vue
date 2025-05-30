@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <div>Count: {{ count }}</div>
+    <div>Global Count: {{ count }}</div>
     <div>Counter: {{ counter }}</div>
     <div>CounterRef: {{ counterRef }}</div>
     <div class="mt-2">
@@ -14,7 +14,10 @@
 </template>
 
 <script lang="ts" setup>
+import { useCounterStore } from '@/stores/counter'
+
+const counterStore = useCounterStore()
 const counter = useState('counter', () => Math.round(Math.random() * 10000))
 const counterRef = ref(Math.round(Math.random() * 10000))
-const count = useCounter()
+const { value: count } = storeToRefs(counterStore)
 </script>

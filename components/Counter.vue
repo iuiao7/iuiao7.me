@@ -10,8 +10,10 @@
 </template>
 
 <script lang="ts" setup>
+import { useCounterStore } from '@/stores/counter'
+const counterStore = useCounterStore()
 // 全局状态
-const count = useCounter()
+const { value: count } = storeToRefs(counterStore)
 // 局部状态
 const count2 = ref(1)
 </script>

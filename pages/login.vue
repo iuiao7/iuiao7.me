@@ -5,7 +5,10 @@
 </template>
 
 <script lang="ts" setup>
-const isLogin = useLogin()
+import { useUserStore } from '@/stores/user'
+
+const userStore = useUserStore()
+const { isLogin } = storeToRefs(userStore)
 const router = useRouter()
 const route = useRoute()
 

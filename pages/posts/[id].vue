@@ -19,13 +19,16 @@
 </template>
 
 <script lang="ts" setup>
+import { useUserStore } from '@/stores/user'
+
 const route = useRoute('posts-id')
 const fetchPost = () => $fetch(`/api/posts/${route.params.id}`)
 const { data, pending, error } = await useAsyncData(fetchPost)
+const userStore = useUserStore()
 
-const comment = useState('comment', () => '')
-const isLogin = useLogin()
 const router = useRouter()
+const { isLogin } = storeToRefs(userStore)
+const comment = useState(() => '')
 
 const handleSubmit = () => {
   if (isLogin.value) {
