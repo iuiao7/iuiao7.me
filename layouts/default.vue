@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="flex min-h-dvh flex-col">
     <LayoutHeader />
-    <div class="container min-h-screen border-b">
-      <slot />
+    <div class="container flex-1 border-b">
+      <slot></slot>
     </div>
     <LayoutFooter />
   </div>
