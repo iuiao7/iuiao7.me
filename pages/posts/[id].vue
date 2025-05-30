@@ -7,7 +7,13 @@
       <article
         class="prose prose-truegray dark:prose-invert mx-auto text-base xl:text-xl"
         v-html="data?.content"
-      />
+      ></article>
+      <!-- 评论区 -->
+      <div class="mx-auto mt-12 grid w-1/2 gap-2">
+        <UiLabel for="message">评论</UiLabel>
+        <UiTextarea v-model="comment" />
+        <UiButton class="w-fit" @click="handleSubmit">提交</UiButton>
+      </div>
     </div>
   </div>
 </template>
@@ -16,4 +22,17 @@
 const route = useRoute('posts-id')
 const fetchPost = () => $fetch(`/api/posts/${route.params.id}`)
 const { data, pending, error } = await useAsyncData(fetchPost)
+
+const comment = useState('comment', () => '')
+const isLogin = useLogin()
+const router = useRouter()
+
+const handleSubmit = () => {
+  if (isLogin.value) {
+    // 提交评论
+    comment.value = ''
+  } else {
+    router.push(`/login?redirect=${route.path}`)
+  }
+}
 </script>
