@@ -3,8 +3,16 @@
     <div v-if="pending">Loading...</div>
     <div v-else-if="error" class="text-red-400">{{ error.message }}</div>
     <div v-for="post of posts" v-else :key="post.id">
-      <NuxtLink :to="`/posts/${post.id}`" class="text-blue-600">{{ post.title }}</NuxtLink>
-      <div>{{ post.date }}</div>
+      <UiCard>
+        <UiCardHeader>
+          <UiCardTitle>
+            <NuxtLink :to="`/posts/${post.id}`" class="hover:underline">{{ post.title }}</NuxtLink>
+          </UiCardTitle>
+        </UiCardHeader>
+        <UiCardContent>
+          <p class="text-sm text-gray-500">{{ new Date(post.date).toLocaleDateString('zh-CN') }}</p>
+        </UiCardContent>
+      </UiCard>
     </div>
     <UiPagination v-if="total > pageSize" :items-per-page="pageSize" :total="total">
       <UiPaginationPrevious @click="prev" />
