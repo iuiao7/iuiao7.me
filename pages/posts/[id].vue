@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="pending">Loading...</div>
-    <div v-else-if="error" class="text-red-400">{{ error.message }}</div>
+    <div v-else-if="error" class="text-red-400">{{ errMessage }}</div>
     <div v-else>
       <h1 class="mb-4 text-2xl font-bold">{{ data?.title }}</h1>
       <article
@@ -22,13 +22,21 @@
 import { useUserStore } from '@/stores/user'
 
 const route = useRoute('posts-id')
-const fetchPost = () => $fetch(`/api/posts/${route.params.id}`)
-const { data, pending, error } = await useAsyncData(fetchPost)
+const { data, pending, error } = await useAsyncData(() => $fetch(`/api/posts/${route.params.id}`))
 const userStore = useUserStore()
 
 const router = useRouter()
 const { isLogin } = storeToRefs(userStore)
 const comment = useState(() => '')
+
+const errMessage = computed(() => error.value?.statusMessage)
+
+// 显示自定义错误页面
+watchEffect(() => {
+  if (error.value) {
+    showError(error.value)
+  }
+})
 
 const handleSubmit = () => {
   if (isLogin.value) {
