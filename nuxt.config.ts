@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {
     enabled: true,
-    componentInspector: false,
   },
 
   vite: {
@@ -21,6 +20,12 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      meta: [
+        { name: 'description', content: '个人博客' },
+        { name: 'keywords', content: 'vue,nuxt,frontend,ts,js,css,html' },
+      ],
+    },
   },
 
   modules: [
@@ -58,4 +63,15 @@ export default defineNuxtConfig({
   },
 
   content: {},
+
+  runtimeConfig: {
+    apiSecret: '123',
+    public: {
+      apiBase: '/api',
+    },
+  },
+
+  imports: {
+    dirs: ['stores'],
+  },
 })

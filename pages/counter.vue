@@ -14,8 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useCounterStore } from '@/stores/counter'
-
 const counterStore = useCounterStore()
 const counter = useState('counter', () => Math.round(Math.random() * 10000))
 const counterRef = ref(Math.round(Math.random() * 10000))

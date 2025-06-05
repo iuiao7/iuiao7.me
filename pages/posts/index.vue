@@ -1,5 +1,9 @@
 <template>
   <div class="flex flex-col gap-4">
+    <Head>
+      <Title>{{ title }}</Title>
+      <Meta name="description" :content="title" />
+    </Head>
     <div v-if="pending">Loading...</div>
     <div v-else-if="error" class="text-red-400">{{ error.message }}</div>
     <div v-for="post of posts" v-else :key="post.id">
@@ -22,6 +26,7 @@
 </template>
 
 <script lang="ts" setup>
+const title = ref('Posts')
 const currentPage = ref(1)
 const pageSize = ref(10)
 const { data, pending, error, refresh } = await useFetch(

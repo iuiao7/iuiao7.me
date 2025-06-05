@@ -12,6 +12,11 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  titleTemplate(title) {
+    return title ? `${title} - Shawn's blog` : `Shawn's blog`
+  },
+})
 // import { defineAsyncComponent } from 'vue'
 
 // const StagewiseToolbar = defineAsyncComponent(() =>

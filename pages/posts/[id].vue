@@ -19,15 +19,18 @@
 </template>
 
 <script lang="ts" setup>
-import { useUserStore } from '@/stores/user'
-
 const route = useRoute('posts-id')
-const { data, pending, error } = await useAsyncData(() => $fetch(`/api/posts/${route.params.id}`))
+const fetchPosts = () => $fetch(`/api/posts/${route.params.id}`)
+const { data, pending, error } = await useAsyncData(fetchPosts)
 const userStore = useUserStore()
 
 const router = useRouter()
 const { isLogin } = storeToRefs(userStore)
 const comment = useState(() => '')
+
+useHead({
+  title: data.value?.title,
+})
 
 const errMessage = computed(() => error.value?.statusMessage)
 
