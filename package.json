@@ -33,7 +33,8 @@
     "tailwindcss": "^4.1.7",
     "tw-animate-css": "^1.3.0",
     "unified": "^11.0.5",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-sonner": "^2.0.0"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.6",

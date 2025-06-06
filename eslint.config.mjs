@@ -32,6 +32,7 @@ export default withNuxt(
             },
           ],
           'no-duplicate-imports': 'off',
+          'unused-imports/no-unused-vars': 'warn',
         },
       },
     ]

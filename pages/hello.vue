@@ -6,11 +6,16 @@
 </template>
 
 <script lang="ts" setup>
+const ins = getCurrentInstance()
 const data = await $fetch('/api/hello')
 const runtimeConfig = useRuntimeConfig()
-console.log('🚀 ~ hello.vue:8 ~ runtimeConfig:', runtimeConfig)
+// console.log('🚀 ~ hello.vue:8 ~ runtimeConfig:', runtimeConfig)
 // The only available runtime config keys on the client side are `public` and `app`.
-console.log('[ runtimeConfig.apiSecret ] >', runtimeConfig.apiSecret)
+// console.log('[ runtimeConfig.apiSecret ] >', runtimeConfig.apiSecret)
+
+onMounted(() => {
+  ins?.proxy?.$alert('Hello world')
+})
 </script>
 
 <style scoped></style>
