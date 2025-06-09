@@ -19,13 +19,23 @@
 </template>
 
 <script lang="ts" setup>
-const route = useRoute('posts-id')
-const fetchPosts = () => $fetch(`/api/posts/${route.params.id}`)
-const { data, pending, error } = await useAsyncData(fetchPosts)
-const userStore = useUserStore()
-
 const router = useRouter()
+const route = useRoute('posts-id')
+
+const userStore = useUserStore()
 const { isLogin } = storeToRefs(userStore)
+
+const fetchPosts = () =>
+  $fetch(`/api/posts/${route.params.id}`, {
+    headers: isLogin.value ? { Authorization: 'Bearer 123' } : {},
+    onResponseError: (error) => {
+      console.log('🚀 ~ [id].vue:32 ~ error:', error)
+      if (error.response.status === 401) {
+        router.push(`/login?redirect=${route.path}`)
+      }
+    },
+  })
+const { data, pending, error } = await useAsyncData(fetchPosts)
 const comment = useState(() => '')
 
 useHead({
@@ -34,9 +44,9 @@ useHead({
 
 const errMessage = computed(() => error.value?.statusMessage)
 
-definePageMeta({
-  middleware: ['auth', 'amid'],
-})
+// definePageMeta({
+//   middleware: ['auth', 'amid'],
+// })
 
 // 显示自定义错误页面
 watchEffect(() => {
