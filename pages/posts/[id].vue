@@ -34,6 +34,10 @@ useHead({
 
 const errMessage = computed(() => error.value?.statusMessage)
 
+definePageMeta({
+  middleware: ['auth', 'amid'],
+})
+
 // 显示自定义错误页面
 watchEffect(() => {
   if (error.value) {
